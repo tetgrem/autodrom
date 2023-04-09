@@ -56,6 +56,14 @@
         }
 
         a {
+            svg {
+                path {
+                    transition: all .3s ease;
+                }
+                circle {
+                    transition: all .3s ease;
+                }
+            }
             &:first-child {
                 svg {
                     &:hover {
