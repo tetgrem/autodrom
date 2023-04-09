@@ -27,4 +27,20 @@ function burgerMenu() {
 burgerMenu()
 
 
+function fixedHeader() {
+    const nav = document.querySelector('.header')
+    const scroll = document.querySelector('.header__section')
+
+    // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
+    const breakpoint = 1
+    if (window.scrollY >= breakpoint) {
+        nav.classList.add('fixed')
+        scroll.classList.add('body_scroll')
+    } else {
+        nav.classList.remove('fixed')
+        scroll.classList.remove('body_scroll')
+    }
+}
+// window.addEventListener('scroll', fixedHeader)
+
 

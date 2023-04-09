@@ -121,6 +121,7 @@
 
     .paragraph24-32 {
       margin-top: 14px;
+      text-align: center;
     }
   }
 
@@ -236,5 +237,120 @@
           height: 50px;
       }
     }
+  }
+}
+
+//about__section
+
+.about {
+  &__section {
+    display: flex;
+    gap: 100px;
+    @media (max-width: $breakpoint1200) {
+      gap: 40px;
+    }
+    @media (max-width: $breakpoint992) {
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__img {
+    flex: 0 1 50%;
+    @media (max-width: $breakpoint1200) {
+      flex: 0 1 70%;
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 100%;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      max-height: 617px;
+
+    }
+  }
+
+  &__info {
+    margin-top: 52px;
+    flex: 0 1 524px;
+    padding-right: 30px;
+    @media (max-width: $breakpoint992) {
+      margin-top: 32px;
+      padding-left: 30px;
+    }
+    @media (max-width: $breakpoint480) {
+      margin-top: 25px;
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 54px;
+      color: #000000;
+
+      @media (max-width: $breakpoint480) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #000000;
+      }
+    }
+
+    .paragraph24-32 {
+      padding-top: 12px;
+
+      @media (max-width: $breakpoint480) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+      }
+    }
+
+    ul {
+      margin-top: 35px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #000000;
+
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text-block {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    max-width: 488px;
+    border: 3px solid rgba(250, 0, 44, 0.15);
+    border-radius: 10px;
+    padding: 12px 76px 12px 20px;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+
+  &__btn {
+    padding: 14px 40px;
+    width: 235px;
+    height: 56px;
   }
 }

@@ -76,7 +76,6 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    text-align: center;
     color: #000000;
 
 }
@@ -92,5 +91,17 @@ body {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        top: -50px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
     }
 }
