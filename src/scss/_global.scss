@@ -24,7 +24,7 @@
 
 // Body & Locked
 body {
-    font-family: $fontMain;
+    font-family: 'Inter', sans-serif;
     &.locked {
         overflow: hidden;
     }

@@ -1,6 +1,6 @@
 // ========================= [ Header styles ] =========================
 .header {
-    background-color: #43adff;
+    background-color: #ffffff;
 
     &.fixed {
         position: fixed;
@@ -9,56 +9,241 @@
         width: 100%;
         z-index: 2;
     }
+
+    &__mobile {
+        .left__item {
+            display: none;
+
+            @media (max-width: $breakpoint992) {
+                display: flex;
+                gap: 10px;
+
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 40px 0;
 }
+
+
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @media (max-width: $breakpoint1200) {
+        gap: 20px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        display: none;
+    }
+
+
+    .left__item {
+        display: flex;
+        gap: 12px;
+        @media (max-width: $breakpoint1200) {
+            gap: 8px;
+        }
+
+        a {
+            &:first-child {
+                svg {
+                    &:hover {
+                        path {
+                            fill:  #229ED9;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2n) {
+                svg {
+                    &:hover {
+                        path {
+                            fill:  #25D366;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                svg {
+                    &:hover {
+                        circle {
+                            fill:  red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right__item {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+
+
+        a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            border-bottom: 1px solid white;
+
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+}
+
 .logo {
     a {
         color: white;
     }
+
 }
 
 // ========================== [ Menu styles ] ==========================
 .menu {
     display: flex;
-    gap: 30px;
+    gap:10px;
+    @media (max-width: $breakpoint1200) {
+        gap: 1px;
+    }
+
+    .burger {
+        &__info {
+            margin-top: 60px;
+            display: none;
+            @media (max-width: $burgerBreakpoint) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            a {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+
+        &__tel {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        &__bottom {
+            display: none;
+            @media (max-width: $burgerBreakpoint) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                bottom: 20px;
+            }
+
+            a {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                text-decoration-line: underline;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
 
     // .menu__item
     &__item {
         display: flex;
         position: relative;
+
+        &.logo__mobile {
+            display: none;
+            @media (max-width: $burgerBreakpoint) {
+                display: block;
+            }
+        }
+
+        @media (max-width: $burgerBreakpoint) {
+            &:first-child {
+                position: absolute;
+                margin-left: -20px;
+                top:52px;
+            }
+        }
+
+        a {
+            padding: 7px 13px;
+            z-index: 3;
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #F50E30;
+                border-radius: 12px;
+                transform: scale(0);
+                transition: .4s ease;
+                z-index: -1;
+
+            }
+            &:hover {
+                span {
+                    transform: scale(1);
+                }
+            }
+        }
     }
 
     // .menu__item-link
     &__item-link {
-        color: white;
-        display: flex;
         position: relative;
-        transition: 0.5s color;
-        &:after {
-            position: absolute;
-            content: '';
-            left: 0;
-            bottom: -3px;
-            background: #131418;
-            height: 1px;
-            width: 100%;
-            transform: scale(0);
-            transition: 0.5s transform;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        color: #000000;
 
-            // Comment if you need border animation
-            display: none;
+        @media (max-width: $burgerBreakpoint) {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #000000;
         }
+
         &:hover {
-            color: #131418;
-            &:after {
-                transform: scale(1);
-            }
+            color: white;
         }
+
+
     }
 
     // Mobile menu styles
@@ -70,6 +255,8 @@
         height: 100vh;
         width: 100vw;
         display: none;
+
+
 
         &.active {
             display: flex;
@@ -124,7 +311,7 @@
             position: absolute;
             height: 2px;
             width: 100%;
-            background: $burgerColor;
+            background: $burgerActiveColor;
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
         }
 
@@ -141,7 +328,7 @@
             top: 9px;
             right: 0;
             width: 100%;
-            background: $burgerColor;
+            background: $burgerActiveColor;
             height: 2px;
             transform: scale(1);
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
