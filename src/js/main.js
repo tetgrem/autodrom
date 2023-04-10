@@ -42,3 +42,60 @@ function fixedHeader() {
 }
 // window.addEventListener('scroll', fixedHeader)
 
+
+const swiper = new Swiper('.whatcars-swiper', {
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    slidesPerGroup: 3,
+    slidesPerView: 3,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+      // Responsive breakpoints
+      breakpoints: {
+      // when window width is >= 320px
+      300: {
+          loop: true,
+        slidesPerView: 1,
+          slidesPerGroup: 1,
+
+          // spaceBetween: 44
+      },
+          592: {
+              slidesPerView: 2,
+              slidesPerGroup:2,
+              spaceBetween:24
+          },
+          900: {
+              slidesPerView: 3,
+              slidesPerGroup:3,
+              spaceBetween:24
+          },
+      // when window width is >= 480px
+      1270: {
+        slidesPerView: 3,
+          slidesPerGroup:3,
+        spaceBetween: 24
+      },
+    }
+});
