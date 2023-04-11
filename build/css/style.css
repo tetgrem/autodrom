@@ -875,6 +875,7 @@ body.dark {
   font-size: 44px;
   line-height: 54px;
   text-align: center;
+  padding: 0 30px;
 }
 
 .review__slider {
@@ -990,6 +991,181 @@ body.dark {
   width: 248px;
   height: 56px;
   padding: 8px 20px;
+}
+
+.buyProcess__section {
+  margin-top: 100px;
+}
+
+.buyProcess__section h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: #000000;
+}
+
+.buyProcess__accordion {
+  margin-top: 40px;
+}
+
+.buyProcess__accordion .accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.buyProcess__accordion .accordion__item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__num {
+  padding: 0 111px 0 110px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 88px;
+  color: #F50E30;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__img {
+  position: relative;
+  margin-left: auto;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__img .trigger__arrow {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  background: #FA002C;
+}
+
+.buyProcess__accordion .accordion__item.accordion__item-active .accordion__item-content {
+  display: block;
+}
+
+.buyProcess__accordion .accordion__item.accordion__item-active .trigger__arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-content {
+  padding: 0 0 20px 311px;
+  display: none;
+  -webkit-animation: fade 0.8s ease;
+          animation: fade 0.8s ease;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-content .content__text {
+  margin: 10px;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-content .content__text:first-child {
+  margin-top: 0;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-link {
+  margin-top: 10px;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-link a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F50E30;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-link a:hover {
+  color: black;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-link a:hover svg path {
+  stroke: black;
+}
+
+.buyProcess__accordion .accordion__item .accordion__item-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-left span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 480px;
+          flex: 0 1 480px;
+}
+
+.buyProcess__accordion .accordion__item .accordion__content-right p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /**
@@ -1850,6 +2026,12 @@ button.swiper-pagination-bullet {
     font-size: 35px;
     line-height: 44px;
   }
+
+  .buyProcess__accordion .accordion__item .accordion__content-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 360px;
+            flex: 0 1 360px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -2047,6 +2229,14 @@ button.swiper-pagination-bullet {
     font-size: 25px;
     line-height: 35px;
   }
+
+  .buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__num {
+    padding: 0 120px 0 11px;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__item-content {
+    padding: 0 0 20px 11px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2231,6 +2421,39 @@ button.swiper-pagination-bullet {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
+
+  .buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__text {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px 0 0;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__item-trigger .trigger__num {
+    font-size: 52px;
+    line-height: 52px;
+    padding: 0 20px 0 11px;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__item-blocks {
+    gap: 30px;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__content-item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__content-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .buyProcess__accordion .accordion__item .accordion__content-right p {
+    font-size: 16px;
+    padding-top: 10px;
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 661px) {
@@ -2290,6 +2513,11 @@ button.swiper-pagination-bullet {
   .advice__block .left__item h1 {
     font-size: 24px;
     line-height: 34px;
+  }
+
+  .buyProcess__section h1 {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 
