@@ -45,23 +45,17 @@ function fixedHeader() {
 
 const swiper = new Swiper('.whatcars-swiper', {
 
-    // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.next__btn',
         prevEl: '.prev__btn',
 
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
     slidesPerGroup: 3,
     slidesPerView: 3,
     spaceBetween: 24,
@@ -71,10 +65,9 @@ const swiper = new Swiper('.whatcars-swiper', {
         disableOnInteraction: false,
     },
 
-      // Responsive breakpoints
+
       breakpoints: {
-      // when window width is >= 320px
-      300: {
+      240: {
           loop: true,
         slidesPerView: 1,
           slidesPerGroup: 1,
@@ -91,7 +84,6 @@ const swiper = new Swiper('.whatcars-swiper', {
               slidesPerGroup:3,
               spaceBetween:24
           },
-      // when window width is >= 480px
       1270: {
         slidesPerView: 3,
           slidesPerGroup:3,
@@ -99,3 +91,35 @@ const swiper = new Swiper('.whatcars-swiper', {
       },
     }
 });
+
+const swiper2 = new Swiper('.review__swiper', {
+
+    pagination: {
+        el: '.review__pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+
+    },
+    slidesPerView: 1,
+    spaceBetween: 24,
+    centeredSlides: true,
+    initialSlide: 1,
+    loop: true,
+
+
+
+
+    breakpoints: {
+        1356: {
+            loop: true,
+            slidesPerView: 3,
+
+        },
+
+    }
+});
+
