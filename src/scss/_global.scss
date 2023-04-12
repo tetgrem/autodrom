@@ -82,6 +82,26 @@ body {
 }
 
 
+.download__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F50E30;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &:hover {
+        color: black;
+        svg {
+            path {
+                stroke: black;
+            }
+        }
+    }
+}
+
 
 // Animations
 // Fade
