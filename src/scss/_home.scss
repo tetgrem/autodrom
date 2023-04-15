@@ -1843,6 +1843,137 @@
 
 
 
+//faq__section
+
+.faq {
+
+  &__section {
+    margin-top: 100px;
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 54px;
+      color: #000000;
+    }
+  }
+
+  &__accordion {
+    margin-top: 40px;
+
+    .accordion__item {
+      border-bottom: 1px solid rgba(36, 38, 40, 0.1);
+
+      &:first-child {
+        border-top: 1px solid rgba(36, 38, 40, 0.1);
+      }
+
+
+
+      // Trigger styles
+      .accordion__item-trigger {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        cursor: pointer;
+
+        .trigger__text {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #000000;
+          margin-left: 10px;
+          max-width: 75%;
+          width: 100%;
+          
+          @media (max-width: $breakpoint480) {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+
+        .trigger__img {
+          position: relative;
+          margin-left: auto;
+          background: #FA002C;
+          width: 64px;
+          height: 64px;
+          border-radius: 100%;
+          padding: 30px 22.5px;
+
+          @media (max-width: $breakpoint480) {
+            transform: scale(.76);
+          }
+          .trigger__line-1 {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: white;
+            border-radius: 100px;
+          }
+
+          .trigger__line-2 {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: white;
+            margin-top: -3px;
+            border-radius: 100px;
+            transform: rotate(90deg);
+          }
+        }
+      }
+      // Active state styles
+      &.accordion__item-active {
+        .accordion__item-content {
+          display: block;
+        }
+
+        .trigger__line-2 {
+          transform: rotate(0) !important;
+          transition: 0.1s transform ease;
+        }
+
+        .trigger__line-1 {
+          opacity: 0;
+          transition: 0.1s all ease;
+        }
+      }
+
+      // Content styles
+      .accordion__item-content {
+        padding-bottom: 20px;
+        display: none;
+        animation: fade 0.3s ease;
+
+        .content__text {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          color: rgba(0, 0, 0, 0.8);
+          margin: 10px;
+          max-width: 75%;
+          width: 100%;
+
+          @media (max-width: $breakpoint480) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
 
 
 

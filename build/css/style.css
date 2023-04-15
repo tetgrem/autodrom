@@ -1826,6 +1826,126 @@ body.dark {
   fill: #25D366;
 }
 
+.faq__section {
+  margin-top: 100px;
+}
+
+.faq__section h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: #000000;
+}
+
+.faq__accordion {
+  margin-top: 40px;
+}
+
+.faq__accordion .accordion__item {
+  border-bottom: 1px solid rgba(36, 38, 40, 0.1);
+}
+
+.faq__accordion .accordion__item:first-child {
+  border-top: 1px solid rgba(36, 38, 40, 0.1);
+}
+
+.faq__accordion .accordion__item .accordion__item-trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.faq__accordion .accordion__item .accordion__item-trigger .trigger__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin-left: 10px;
+  max-width: 75%;
+  width: 100%;
+}
+
+.faq__accordion .accordion__item .accordion__item-trigger .trigger__img {
+  position: relative;
+  margin-left: auto;
+  background: #FA002C;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  padding: 30px 22.5px;
+}
+
+.faq__accordion .accordion__item .accordion__item-trigger .trigger__img .trigger__line-1 {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: white;
+  border-radius: 100px;
+}
+
+.faq__accordion .accordion__item .accordion__item-trigger .trigger__img .trigger__line-2 {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: white;
+  margin-top: -3px;
+  border-radius: 100px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.faq__accordion .accordion__item.accordion__item-active .accordion__item-content {
+  display: block;
+}
+
+.faq__accordion .accordion__item.accordion__item-active .trigger__line-2 {
+  -webkit-transform: rotate(0) !important;
+      -ms-transform: rotate(0) !important;
+          transform: rotate(0) !important;
+  -webkit-transition: 0.1s -webkit-transform ease;
+  transition: 0.1s -webkit-transform ease;
+  -o-transition: 0.1s transform ease;
+  transition: 0.1s transform ease;
+  transition: 0.1s transform ease, 0.1s -webkit-transform ease;
+}
+
+.faq__accordion .accordion__item.accordion__item-active .trigger__line-1 {
+  opacity: 0;
+  -webkit-transition: 0.1s all ease;
+  -o-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+}
+
+.faq__accordion .accordion__item .accordion__item-content {
+  padding-bottom: 20px;
+  display: none;
+  -webkit-animation: fade 0.3s ease;
+          animation: fade 0.3s ease;
+}
+
+.faq__accordion .accordion__item .accordion__item-content .content__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 10px;
+  max-width: 75%;
+  width: 100%;
+}
+
+.faq__accordion .accordion__item .accordion__item-content .content__text:first-child {
+  margin-top: 0;
+}
+
 /**
  * Swiper 7.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -3379,6 +3499,22 @@ button.swiper-pagination-bullet {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .faq__accordion .accordion__item .accordion__item-trigger .trigger__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .faq__accordion .accordion__item .accordion__item-trigger .trigger__img {
+    -webkit-transform: scale(0.76);
+        -ms-transform: scale(0.76);
+            transform: scale(0.76);
+  }
+
+  .faq__accordion .accordion__item .accordion__item-content .content__text {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
