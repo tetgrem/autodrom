@@ -591,7 +591,7 @@ body.dark {
 }
 
 .about__info {
-  margin-top: 52px;
+  margin-top: 32px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 524px;
           flex: 0 1 524px;
@@ -657,7 +657,7 @@ body.dark {
 }
 
 .whatCars__section {
-  margin-top: 100px;
+  padding-top: 100px;
   background-color: #F4F6F8;
   padding-bottom: 100px;
   position: relative;
@@ -1946,6 +1946,374 @@ body.dark {
   margin-top: 0;
 }
 
+.calc__section {
+  margin-top: 100px;
+  background: url("../img/calculat.png") center center no-repeat;
+  background-size: cover;
+  padding: 127px 0 100px 0;
+}
+
+.calc__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 41px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.calc__blocks .left__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 459px;
+          flex: 0 1 459px;
+  padding: 40px 32px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.calc__blocks .left__item h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.calc__blocks .left__item p {
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.calc__blocks .left__item input[type=text] {
+  margin-top: 20px;
+  max-width: 395px;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 18px 20px 17px 20px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.calc__blocks .left__item input[type=text]::-webkit-input-placeholder {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.calc__blocks .left__item input[type=text]::-moz-placeholder {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.calc__blocks .left__item input[type=text]:-ms-input-placeholder {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.calc__blocks .left__item input[type=text]::-ms-input-placeholder {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.calc__blocks .left__item input[type=text]::placeholder {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.calc__blocks .left__item button {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 100%;
+  width: 100%;
+  color: #FFFFFF;
+  padding: 16px 70px;
+}
+
+.calc__blocks .left__item h3 {
+  padding: 24px 0 16px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.calc__blocks .left__checkbox {
+  margin-top: 8px;
+}
+
+.calc__blocks .left__checkbox .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.calc__blocks .left__checkbox .checkbox {
+  display: none;
+}
+
+.calc__blocks .left__checkbox .checkbox:checked ~ .checkbox__on::after {
+  opacity: 1;
+}
+
+.calc__blocks .left__checkbox .checkbox__on {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.calc__blocks .left__checkbox .checkbox__on::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background: url("../img/Shape.svg") center center no-repeat;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.calc__blocks .left__checkbox .checkbox__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.calc__blocks .left__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calc__blocks .left__socials .whatsapp,
+.calc__blocks .left__socials .telegram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border: 1px solid #FA002C;
+  border-radius: 100px;
+  padding: 8px 16px;
+  color: black;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.calc__blocks .left__socials .whatsapp svg path,
+.calc__blocks .left__socials .telegram svg path {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.calc__blocks .left__socials .whatsapp:hover,
+.calc__blocks .left__socials .telegram:hover {
+  background-color: #FA002C;
+  color: white;
+}
+
+.calc__blocks .left__socials .whatsapp:hover svg path,
+.calc__blocks .left__socials .telegram:hover svg path {
+  fill: white;
+}
+
+.calc__blocks .right__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 761px;
+          flex: 0 1 761px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 40px 100px 60px 40px;
+}
+
+.calc__blocks .right__item h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: #000000;
+}
+
+.calc__blocks .right__item ul {
+  margin-top: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  max-width: 550px;
+}
+
+.calc__blocks .right__item ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.calc__blocks .right__item ul li svg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36px;
+          flex: 0 0 36px;
+}
+
+.calc__blocks .right__item ul li span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+
+footer {
+  background: #F4F6F8;
+  padding-top: 100px;
+}
+
+footer h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: #000000;
+}
+
+.footer__row-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 160px;
+  margin-top: 56px;
+}
+
+.footer__row-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 160px;
+  margin-top: 40px;
+}
+
+.footer__row-second .row__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.footer__map {
+  margin-top: 40px;
+}
+
+.footer__map img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.footer__links {
+  margin-top: 55px;
+  padding-bottom: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 157px;
+}
+
+.footer__links a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.row__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 273px;
+          flex: 0 1 273px;
+}
+
+.row__item h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.row__item span,
+.row__item a {
+  display: inline-block;
+  padding-top: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.row__item a:hover {
+  color: #f50e30;
+}
+
+.row__item p:last-child {
+  margin-top: -16px;
+}
+
 /**
  * Swiper 7.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -2765,6 +3133,18 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+@media (max-width: 1550px) {
+  .about__info h1 {
+    font-size: 34px;
+    line-height: 32px;
+  }
+
+  .about__info .paragraph24-32 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
@@ -3069,6 +3449,46 @@ button.swiper-pagination-bullet {
         -ms-flex: 0 0 380px;
             flex: 0 0 380px;
   }
+
+  .calc__blocks {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .calc__blocks .left__item {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .calc__blocks .left__item input[type=text] {
+    max-width: 100%;
+  }
+
+  .calc__blocks .right__item {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 30px;
+  }
+
+  .calc__blocks .right__item h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .footer__row-top {
+    gap: 100px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -3341,6 +3761,21 @@ button.swiper-pagination-bullet {
   .team__section p {
     font-size: 20px;
   }
+
+  .footer__row-top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .footer__row-second {
+    gap: 100px;
+  }
+
+  .row__item {
+    -ms-flex-wrap: 0 1 100%;
+        flex-wrap: 0 1 100%;
+  }
 }
 
 @media (max-width: 661px) {
@@ -3515,6 +3950,43 @@ button.swiper-pagination-bullet {
   .faq__accordion .accordion__item .accordion__item-content .content__text {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .calc__blocks .left__item button {
+    padding: 16px 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .calc__blocks .left__socials {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  footer h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .footer__row-second {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .footer__links {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer__links a {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 

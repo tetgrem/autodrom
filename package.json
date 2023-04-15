@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "imask": "^6.6.0-alpha.0"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",

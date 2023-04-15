@@ -1,4 +1,5 @@
-// Мобильное меню бургер
+
+
 function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
@@ -40,7 +41,7 @@ function fixedHeader() {
         scroll.classList.remove('body_scroll')
     }
 }
-// window.addEventListener('scroll', fixedHeader)
+window.addEventListener('scroll', fixedHeader)
 
 // Аккордеон
 function accordion() {
@@ -176,3 +177,9 @@ const swiper4 = new Swiper('.other__swiper', {
         }
     }
 });
+
+const maskElement = document.querySelector('.phone__input')
+const maskOptions = {
+    mask: '+{38} (000) 000-00-00',
+}
+const mask = IMask(maskElement, maskOptions)
