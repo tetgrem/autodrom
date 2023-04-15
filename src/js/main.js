@@ -142,3 +142,17 @@ const swiper2 = new Swiper('.review__swiper', {
     }
 });
 
+
+const swiper3 = new Swiper('.comparison__swiper', {
+
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+    },
+
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    }
+});
