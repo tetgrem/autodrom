@@ -1737,6 +1737,95 @@ body.dark {
   width: 100%;
 }
 
+.team__section {
+  margin-top: 100px;
+  background-color: #F4F6F8;
+  padding: 100px 0;
+}
+
+.team__section p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+.team__block {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__info {
+  padding: 0 32px;
+  position: absolute;
+  z-index: 10;
+  top: 62%;
+}
+
+.team__info h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.team__info h2 {
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.team__info span {
+  display: inline-block;
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #F50E30;
+}
+
+.team__socials {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.team__socials a svg path {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.team__socials a:first-child:hover svg path {
+  fill: #007aff;
+}
+
+.team__socials a:last-child:hover svg path {
+  fill: #25D366;
+}
+
 /**
  * Swiper 7.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -3128,6 +3217,10 @@ button.swiper-pagination-bullet {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
+
+  .team__section p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 661px) {
@@ -3265,6 +3358,27 @@ button.swiper-pagination-bullet {
 
   .other__row .right__item p span {
     font-size: 25px;
+  }
+
+  .team__item {
+    padding: 0 32px;
+  }
+
+  .team__item img {
+    max-width: 198px;
+    width: 100%;
+  }
+
+  .team__info {
+    position: static;
+    padding: 0;
+    text-align: center;
+  }
+
+  .team__socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
