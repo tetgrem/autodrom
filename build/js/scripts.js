@@ -171,3 +171,23 @@ const swiper3 = new Swiper('.comparison__swiper', {
         disableOnInteraction: false,
     }
 });
+
+const swiper4 = new Swiper('.other__swiper', {
+
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+    },
+    slidesPerView: 1.5,
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+    breakpoints: {
+        600: {
+            slidesPerView: 3,
+        }
+    }
+});

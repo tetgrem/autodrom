@@ -530,6 +530,9 @@
           left: 210px;
           top: calc(50% - 86.5px);
         }
+        &.other__btn {
+          left: -30.5px;
+        }
       }
     }
     &.next {
@@ -539,6 +542,9 @@
         &.review__btn {
           right: 200px;
           top: calc(50% - 86.5px);
+        }
+        &.other__btn {
+          right: -30.5px;
         }
       }
     }
@@ -1570,6 +1576,153 @@
     }
   }
 }
+
+//---------------------------------//
+
+
+
+//other__section
+
+.other {
+
+  &__section {
+    margin-top: 100px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @media (max-width: $breakpoint768) {
+      flex-wrap: wrap;
+    }
+
+    .left {
+
+      &__item {
+        flex: 0 1 580px;
+
+        @media (max-width: $breakpoint768) {
+          flex: 0 1 100%;
+        }
+
+        h1 {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 44px;
+          line-height: 54px;
+          color: #000000;
+
+          @media (max-width: $breakpoint992) {
+            font-size: 36px;
+            line-height: 40px;
+          }
+          
+          @media (max-width: $breakpoint480) {
+            font-size: 28px;
+            line-height: 36px;
+          }
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 32px;
+          margin-top: 20px;
+          color: rgba(0, 0, 0, 0.8);
+
+          @media (max-width: $breakpoint480) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+      }
+
+      &__button {
+        margin-top: 32px;
+        display: flex;
+      }
+
+      &__btn {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        padding: 14px 38px;
+      }
+    }
+
+    .right {
+      &__item {
+        flex: 0 0 410px;
+        @media (max-width: $breakpoint768) {
+          flex: 0 1 100%;
+        }
+        padding: 16px 30px;
+        border: 3px solid rgba(250, 0, 44, 0.15);
+        border-radius: 10px;
+
+        @media (max-width: $breakpoint992) {
+          padding: 10px 20px;
+          flex: 0 0 380px;
+
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 40px;
+          color: #000000;
+
+          span {
+            font-weight: 800;
+            color: #F50E30;
+            font-size: 34px;
+            white-space: nowrap;
+
+            @media (max-width: $breakpoint480) {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: 45px;
+
+  }
+
+  &__slide {
+    cursor: pointer;
+
+    img {
+      max-width: 411px;
+      width: 100%;
+    }
+  }
+
+}
+
+//---------------------------------//
+
+
+
+
+
+
+
+
+
+
+
 
 
 
